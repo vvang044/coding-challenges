@@ -18,3 +18,7 @@
           }
     }
 };
+
+const nums = [2,7,11,15];
+const target = 18;
+console.log(twoSum(nums,target));
