@@ -46,10 +46,8 @@ console.log(isValid("{[]}"))
 //     } 
 //     if (stack < 0 ) {
 //         return false;
-//     }
-    
+//     } 
 // }
-
 // if( stack === 0){
 //     return true;
 // } else {
