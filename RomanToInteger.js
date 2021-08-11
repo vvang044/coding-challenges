@@ -44,7 +44,6 @@ let romanToInt = function(s){
         }
     
     }
-
     return total;
 
 }
