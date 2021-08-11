@@ -1,7 +1,6 @@
 //Write a function to find the longest common prefix
 //string amongts an array of string
 //if there is a no common prefix return empty string ""
-
 //Example
 //Input: strs = ["flowers", "flow", "flight"]
 //Output: "fl"
