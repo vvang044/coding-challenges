@@ -3,7 +3,6 @@
 // You may assume that each input would have exactly one solution and you may not use the
 // same element twice
 // you can return the answer in any order
-
 /**
  * @param {number[]} nums
  * @param {number} target

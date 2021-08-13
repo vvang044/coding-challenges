@@ -1,7 +1,7 @@
 //1st solutions
 //create a stack that holds all the indeces 
 //traverse through the given input
- //if we come across open brakets we push it to our stack
+//if we come across open brakets we push it to our stack
 //if we don't come across an opening brackets but we see closing brackets
 // we remove the last bracket from the stack
 // if the last bracket we pushed is [ and the index is ] we remove '[ '
@@ -46,10 +46,8 @@ console.log(isValid("{[]}"))
 //     } 
 //     if (stack < 0 ) {
 //         return false;
-//     }
-    
+//     } 
 // }
-
 // if( stack === 0){
 //     return true;
 // } else {
