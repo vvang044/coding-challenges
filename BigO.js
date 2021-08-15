@@ -13,6 +13,7 @@
 //if the patients increase the dentist still takes 30 mins
 //so this is linear equation which is 30 * patients which is Big O
 
+//O(1) = O(yeah)
 function linearfunction(arr){
     for (let i=0; i< arr.length; i++){ //O(n)
         console.log(1000*10000) 
@@ -80,7 +81,7 @@ function cube(n){
 //so the above code runs 64 times
 //this function is O of n cube
 
-//*******O ( log n) */
+//*******O ( log n) ************************/
 //first you need to understand wehat logirithm is
 //simply put a logarithm is the power that a number needs to be raised
 //to get some other number
@@ -103,4 +104,21 @@ function logFunc(n){
 //which took 3 levels
 //our funciton becomes o ( Log n)
 //our function becomes O ( log base 2 , 8) which is 3
+
+//**************O(log n) iterative/non-recursive******************** */
+function logn(n){
+    while (n > 1){
+        n = Math.floor(n/2)
+    }
+}
+//let n = 8
+//iteration 1 : n = 8/2 = 4
+//iteration 2 : n = 4/2 = 2
+//iteration 3 : n = 2/2 = 1
+//we will stop because n = 1
+//so this function should be O ( log 8)
+// which is o( log base 2, 8) = which is 2 to the power 3
+//division is the inverse of multiplication
+//thats why this non recursive function is O ( log N)
+
 
