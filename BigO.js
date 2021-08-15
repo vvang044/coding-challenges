@@ -54,7 +54,53 @@ function square(n){
 //first iterations is i=0 and j=0, i=0, j=1, i=0, j=2, i=0, j=3, i=0, j=4 
 //second iterations is i=1 and j=0, i=1, j=1, i=1, j=2, i=1, j=3, i=1, j=4 
 //so on you have a square
+//0 1  2  3
+//1
+//2
+//3
 //The area of square is 4 x 4 this is going to equal number of cells within the matrix you just crated
 //its the number of times this code runs is 16
 //which is O(4(square)), which is O(n(square))
+
+//****** O(n cubed) /
+//to undersstand of O of n cube
+function cube(n){
+    for(let i=0; i<n; i++){
+        for(let j=0; j<n; j++){
+            for(let k=0; k<n; k++){
+                console.log(i,j,k)
+            }
+        }
+    }
+}
+//instead of console logging the coordinates i,j,k lets do squares
+//if you do this way, you ahve height, width and length
+//to get the volume of the cube it will be lx W x H which is 4 to the power 3
+//which is O of n cube, which is 64
+//so the above code runs 64 times
+//this function is O of n cube
+
+//*******O ( log n) */
+//first you need to understand wehat logirithm is
+//simply put a logarithm is the power that a number needs to be raised
+//to get some other number
+//lets say 8
+//we need to raise some number to power to get 8
+//2 to the power 3 is 8
+//in Log base 2 of 8 is 3
+//O(log n)
+//n = 8
+function logFunc(n){
+    if(n===0) return "Done";
+    n = Math.floor(n/2);
+    return logFunc(n);
+}
+//if we pass n = 8, it will gets divided by 2 and the new half
+//gets passed on again as n using the logFunc
+//logFunc(8) -- 8 / 2 = 4 , which is level 1
+//logFunc(4) -- 4 / 2 = 2 , which is level 2
+//logFunc(2) -- 2 / 2 = 1 , which is level 3
+//which took 3 levels
+//our funciton becomes o ( Log n)
+//our function becomes O ( log base 2 , 8) which is 3
 
