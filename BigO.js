@@ -121,4 +121,61 @@ function logn(n){
 //division is the inverse of multiplication
 //thats why this non recursive function is O ( log N)
 
+//*************Binary Search and O ( log n)******* */
+//How does a binary search work and why is it usefull?
+//Unordered array [34, 2, 52, 3], this will not work
+//an array should be ascending or descending order
+//Ordered Array Visuatlization
+//[1,2,7,43,44,54,100,124]
+//let's say we are looking for 100
+//the naive way is iterate through each index to find 100
+//if the array has a million it will take forenver.
+//we will use binary search to find
+//[1 , 2 , 7 , 43 , 44 , 54 , 100 , 124]
+//start by finding the midpoint of the array above
+//which will be somwhere around "43"
+//values are increase after 43 -->
+//left of the midpoint is decreasing
 
+//for the time being if we pretend we are searching fof "2"
+//it will be to the left of 43
+// 2 < 43 < 100
+//Is the number you're searching for is greater than or less than our midpoint?
+
+//now we know 100 will be the right side of the midpoint
+//we can get ride of the left midpoint numbers
+//we will be left with [ 44 , 54 , 100 , 124]
+//we cut the array into half
+//now cut the [ 44 , 54 , 100 , 124] into by finding midpoint
+//so the mid point is 2, which is 4 / 2,
+//index 2 is 100
+
+//Coding Binary Search
+let arr = [ 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 ]
+//we are going to pass starting index
+let start = 0;
+//we are going to get the last index
+let end = arr.length - 1;
+//we want the target value, the number you're looking for
+let target = 8;
+
+function binarySearch(arr, start, end, target){
+    //if the target doesnt exist
+    if ( start > end ) return false;
+
+
+    let midIndex = Math.floor(( start + end ) / 2 );
+    
+    if(arr[midIndex] === target ) return true;
+    //the value we are searching for is mid index then we return
+
+    //if its not true is it on the left side of the array
+    if ( arr[midIndex > target ] ) return binarySearch(arr, start, midIndex -1, target)
+    //starting from midpoint, if mid is 5
+    else return binarySearch(arr, midIndex + 1, end, target)
+}
+
+console.log(binarySearch(arr, start, end, target))
+
+
+//**************O ( n log n) **********/
