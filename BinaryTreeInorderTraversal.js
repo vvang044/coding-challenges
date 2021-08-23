@@ -32,6 +32,8 @@ Output : [1]
  * @param {TreeNode} root
  * @return {number[]}
  */
+
+//In-order: left, self, right
 var inorderTraversal = function(root) {
     const stack = []
     const result = []
