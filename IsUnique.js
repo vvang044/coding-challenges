@@ -23,9 +23,9 @@ let isUnique = (s) => {
         let c = s[i]
         
         if (hash[c]){
-            return false;
+            return true;
         } else {
-            hash[c] = true;
+            hash[c] = false;
         }
 
     }
