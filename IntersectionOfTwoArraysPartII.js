@@ -11,19 +11,37 @@ Output: [2,2]
 */
 
 var intersect = function(nums1, nums2) {
-    
-    let temp = nums1.filter(value => (nums2.includes(value)) )
+     let obj = {}
+     let result = []
 
-    let result = []
+    //  for ( let num of nums1){
+    //      if(!obj[num]){
+    //          obj[num] = 1
+    //      } else {
+    //          obj[num] ++
+    //      }
+    //  }
+
+    for (let num of nums1){
+        
+    // obj[num] = obj[num] + 1 || 1;
+
+    obj[num] = (obj[num] || 0 ) + 1;
+    }
+
+   //  console.log(obj) { '4': 2, '5': 1, '9': 1 }
     
-     for(let i=0; i<temp.length;i++){
-        if(temp.indexOf(temp[i]) === temp.lastIndexOf(temp[i])){
-            return result.push(i);
-        } 
-     }
-      
-      return result
-    
+    for ( let num of nums2){
+        if(obj[num] > 0){
+            result.push(num)
+            obj[num]--
+        }
+    }
+    return result
 };
 
-console.log(intersect([4,9,5,4],[4,9]))
+
+console.log(intersect([4,9,5,4],[4,9])) //[4,9]
+console.log(intersect([1,2,2,1],[2,2])) //[2,2]
+console.log(intersect([4,9,5],[9,4,9,8,4])) //[9,4]
+
