@@ -19,3 +19,9 @@ Input: nums = [5,4,-1,7,8]
 Output: 23
 
 */
+
+let maxSubArray = function(nums){
+
+}
+
+console.log(maxSubArray);
