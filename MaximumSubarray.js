@@ -21,7 +21,18 @@ Output: 23
 */
 
 let maxSubArray = function(nums){
+    let maximumSum = nums[0];
 
+    for( let i=1; i < nums.length; i++){
+        if(nums[i - 1] > 0) {
+            nums[i] += nums[i - 1];
+        }
+        maximumSum = Math.max(nums[i], maximumSum);
+    }
+
+    return maximumSum;
 }
 
-console.log(maxSubArray);
+
+
+console.log(maxSubArray([-2,1,-3,4,-1,2,1,-5,4]));
